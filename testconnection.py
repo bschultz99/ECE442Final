@@ -18,5 +18,5 @@ if __name__ == '__main__':
         ser.write(b"255\n")
         ser.write(b"1\n")
         line = ser.readline().decode('utf-8').rstrip()
-        print(line.type)
+        print(line.split(",")[0])
         time.sleep(1)
