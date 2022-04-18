@@ -29,6 +29,6 @@ if __name__ == '__main__':
         #thingspeak_field5 = {"field5": line.split(",")[2]}
         thingspeak_field6 = {"field6": servo}
         thingspeak_field7 = {"field7": line.split(",")[0]}
-        thingspeak_field8 = {"field8": line.split(",")[1]}
+        #thingspeak_field8 = {"field8": line.split(",")[1]}
         print(line.split(",")[0])
         time.sleep(1)
