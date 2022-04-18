@@ -17,11 +17,11 @@ if __name__ == '__main__':
     blue = 255
     servo = 0
     while True:
-        ser.write( fans + b"\n")
-        ser.write(red + b"\n")
-        ser.write(green + b"\n")
-        ser.write(blue + b"\n")
-        ser.write(servo + b"\n")
+        ser.write( str(fans) + b"\n")
+        ser.write(str(red) + b"\n")
+        ser.write(str(green) + b"\n")
+        ser.write(str(blue) + b"\n")
+        ser.write(str(servo) + b"\n")
         line = ser.readline().decode('utf-8').rstrip()
         thingspeak_field1 = {"field1": fans}
         thingspeak_field2 = {"field2": red}
