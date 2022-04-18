@@ -31,4 +31,12 @@ if __name__ == '__main__':
             thingspeak_field5 = {"field5": line.split(",")[2]}
             thingspeak_field7 = {"field7": line.split(",")[0]}
             thingspeak_field8 = {"field8": line.split(",")[1]}
+            ts.update(thingspeak_field5)
+            ts.update(thingspeak_field7)
+            ts.update(thingspeak_field8)
+        ts.update(thingspeak_field1)
+        ts.update(thingspeak_field2)
+        ts.update(thingspeak_field3)
+        ts.update(thingspeak_field4)
+        ts.update(thingspeak_field6)
         time.sleep(1)
