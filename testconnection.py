@@ -10,18 +10,17 @@ if __name__ == '__main__':
     key = "B4XFISTMGQ65143C"
     url = 'https://api.thingspeak.com/update'
     ts = thingspeak.Channel(channel_id, key, url)
-    data = ""
     fans = 100
     red = 0
     green = 255
     blue = 255
     servo = 0
     while True:
-        ser.write( str(fans) + b"\n")
-        ser.write(str(red) + b"\n")
-        ser.write(str(green) + b"\n")
-        ser.write(str(blue) + b"\n")
-        ser.write(str(servo) + b"\n")
+        ser.write(b"100\n")
+        ser.write(b"0\n")
+        ser.write(b"255\n")
+        ser.write(b"255\n")
+        ser.write(b"0\n")
         line = ser.readline().decode('utf-8').rstrip()
         thingspeak_field1 = {"field1": fans}
         thingspeak_field2 = {"field2": red}
