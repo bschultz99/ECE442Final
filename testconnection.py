@@ -18,6 +18,6 @@ if __name__ == '__main__':
         ser.write(b"255\n")
         ser.write(b"1\n")
         line = ser.readline().decode('utf-8').rstrip()
-        data.strip(",")
-        print(line)
+        data.split(",")
+        print(data)
         time.sleep(1)
